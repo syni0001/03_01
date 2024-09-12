@@ -1,0 +1,13 @@
+@layer reset, global, components, overrides;
+
+@import url("./reset.css") layer(reset);
+
+@layer global {
+  h1 {
+    color: #ffffff;
+    font-family: "Cabin", sans-serif;
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+}

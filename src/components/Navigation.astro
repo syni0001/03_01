@@ -1,0 +1,178 @@
+<nav>
+  <a href="/" id="logo">AskExperts</a>
+  <ul class="desktop_nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/service">Case Study</a></li>
+    <li><a href="/om">Team</a></li>
+    <li><a href="/#kontakt" class="btn btn_nav">About</a></li>
+  </ul>
+  <div id="btn"><a href="">Login</a></div>
+  <div id="mobile_nav">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</nav>
+
+<style>
+  #btn{
+        display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #FFCC4A;
+		border-radius: 20px;
+		width: 90px;
+		height: 40px;
+		min-height: 30px;
+		min-width: 60px;
+    
+  }
+
+  nav a{
+  text-decoration: none;
+  color: #fff;
+  }
+
+  nav li{
+   list-style: none;
+  }
+
+  #logo a{
+    color: white;
+  }
+
+  .desktop_nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .desktop_nav li a {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    letter-spacing: 0.15rem;
+    margin: 0;
+    transition: 0.2s;
+  }
+
+  .desktop_nav li a:hover {
+    color: var(--color-two);
+  }
+
+  .desktop_nav li a.btn_nav {
+    color: whitesmoke;
+    background-color: var(--color-two);
+  }
+
+  /* Mobile nav adjustments */
+  #mobile_nav {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+    position: absolute; /* Ensure it's fixed to the viewport */
+    top: 40px; /* Adjust as needed to align with logo */
+    right: 20px; /* Align to the right edge */
+  }
+
+  #mobile_nav .line {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(255, 253, 253)
+    transition: 0.2s linear;
+    border-radius: 100px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 800px) {
+    .desktop_nav {
+      display: none;
+    }
+
+    nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsla(0, 0%, 11%, 0.91);
+    align-items: center;
+    padding: 3rem 0rem;
+  }
+
+
+    #mobile_nav {
+      display: block;
+    }
+
+    #mobile_nav.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 9.5px);
+    }
+
+    #mobile_nav.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #mobile_nav.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    nav.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff; /* Background color for the mobile menu */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    nav.active #logo {
+      display: none;
+    }
+
+    nav.active .desktop_nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem; /* Increased gap for more space between logo and menu points */
+    }
+
+    nav.active .desktop_nav li {
+      display: block;
+      text-align: center;
+    }
+
+    nav.active .desktop_nav li a {
+      font-family: "Oswald", sans-serif;
+      font-weight: 500;
+      font-size: 2rem;
+      color: black;
+      letter-spacing: 0.2rem;
+    }
+
+    nav.active .desktop_nav li a.btn_nav {
+      font-size: 1.8rem;
+      padding: 1rem 2rem;
+      color: whitesmoke;
+    }
+  }
+
+  @media (min-width: 800px) {
+
+    nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsla(0, 0%, 11%, 0.91);
+    align-items: center;
+    padding: 3rem 13rem;
+  }
+
+  }
+</style>
+
+<script src="../js/menu.js"></script>
