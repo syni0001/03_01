@@ -1,12 +1,12 @@
 ---
-import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
-const employeeData = await
-fetch("https://raw.githubusercontent.com/syni0001/frontend-design/main/resources/json/corevalues.json").then((res) =>
-res.json());
 import daisy from "../assests/imgs/daisy.jpg"
 import EmployeeSection from "../components/EmployeeSection.astro"
 import Footer from "../components/Footer.astro"
+const employeeData = await
+fetch("https://raw.githubusercontent.com/syni0001/frontend-design/main/resources/json/corevalues.json").then((res) =>
+res.json());
+
 ---
 
 <BaseLayout title="Home">
